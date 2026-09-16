@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- terminal window -->
+  <rect x="2" y="3" width="12" height="10" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.5"/>
+  <!-- prompt -->
+  <text x="3.5" y="7.5" font-family="monospace" font-size="4" fill="#22D3EE">&gt;_</text>
+  <!-- cursor -->
+  <rect x="7" y="5.5" width="2" height="4" fill="#22D3EE" opacity="0.8"/>
+  <!-- bottom bar -->
+  <rect x="2" y="11.5" width="12" height="1.5" fill="#334155" rx="0.5"/>
+</svg>

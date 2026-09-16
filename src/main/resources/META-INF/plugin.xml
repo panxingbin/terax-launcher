@@ -1,0 +1,44 @@
+<idea-plugin>
+    <id>com.github.crynta.quick-launch</id>
+    <name>Quick Launch</name>
+    <version>0.1.4</version>
+    <vendor url="https://github.com/crynta">crynta</vendor>
+
+    <description><![CDATA[
+        Quick Launch - Launch Terax, Netcatty, CMD, or any custom app from the IDE toolbar.
+        Adds an icon to the main toolbar. Clicking it opens the current project root
+        in the selected application.
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <ul>
+            <li>0.1.3: Restore original terax and netcatty icons extracted from executables.</li>
+            <li>0.1.2: Fix plugin icon — move to META-INF/pluginIcon.svg for proper display.</li>
+            <li>0.1.1: Fix toolbar icon display — switch to SVG icons for proper scaling.</li>
+            <li>0.1.0: Initial release. Toolbar action to open current project in your preferred app.</li>
+        </ul>
+    ]]></change-notes>
+
+    <idea-version since-build="241"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <icon>/icons/plugin.svg</icon>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectConfigurable instance="com.github.crynta.terax.TeraxSettings"
+                             id="com.github.crynta.terax.TeraxSettings"
+                             displayName="Quick Launch"
+                             parentId="tools"/>
+        <applicationService serviceImplementation="com.github.crynta.terax.TeraxSettingsState"/>
+    </extensions>
+
+    <actions>
+        <action id="com.github.crynta.terax.TeraxLaunchAction"
+                class="com.github.crynta.terax.TeraxLaunchAction"
+                text="Quick Launch"
+                description="Open current project in your preferred app"
+                icon="/icons/terax.png">
+            <add-to-group group-id="MainToolbarRight" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
