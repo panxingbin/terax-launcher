@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.github.crynta"
-version = "0.1.4"
+version = "0.1.5"
 
 repositories {
     mavenLocal()
@@ -38,7 +38,7 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("242")
-        untilBuild.set("262.*")
+        untilBuild.set("263.*")
     }
 
     signPlugin {
